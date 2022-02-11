@@ -4,10 +4,15 @@ html {
 }
 
 body {
- width: 50%;
- max-width: 800px;
- min-width: 480px;
- margin: 0 ;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+header, footer {
+  background-color: green;
+  color: white;
+  line-height: 100px;
+  padding: 0 20px;
 }
 
 .lastResult {
