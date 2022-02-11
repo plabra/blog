@@ -131,7 +131,7 @@ window.onload = function() {
         // Create a button and place it inside each listItem
         const deleteBtn = document.createElement('button');
         listItem.appendChild(deleteBtn);
-        deleteBtn.textContent = 'Delete';
+        deleteBtn.textContent = '删除';
 
         // Set an event handler so that when the button is clicked, the deleteItem()
         // function is run
