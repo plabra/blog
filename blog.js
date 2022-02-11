@@ -125,7 +125,7 @@ window.onload = function() {
         // Create a button and place it inside each listItem
         const deleteBtn = document.createElement('button');
         listItem.appendChild(deleteBtn);
-        deleteBtn.textContent = '删除';
+        deleteBtn.textContent = 'Delete';
 
         // Set an event handler so that when the button is clicked, the deleteItem()
         // function is run
@@ -168,7 +168,7 @@ window.onload = function() {
       // Again, if list item is empty, display a 'No notes stored' message
       if(!list.firstChild) {
         const listItem = document.createElement('li');
-        listItem.textContent = '无';
+        listItem.textContent = 'No notes stored.';
         list.appendChild(listItem);
       }
     };
