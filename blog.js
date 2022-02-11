@@ -1,6 +1,6 @@
 
 
-// upload blogs //
+// upload blogs 
 // Create needed constants
 const list = document.querySelector('ul');
 const titleInput = document.querySelector('#title');
