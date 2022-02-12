@@ -48,7 +48,7 @@ window.onload = function() {
     objectStore.createIndex('body', 'body', { unique: false });
     objectStore.createIndex('author', 'author', { unique: false });
     objectStore.createIndex('time', 'time', { unique: false });
-    objectStore.createIndex('blank', 'blank', { unique: true });
+    objectStore.createIndex('blank', 'blank', { unique: false });
     console.log('Database setup complete');
   };
 
