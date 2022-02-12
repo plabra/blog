@@ -46,7 +46,7 @@ window.onload = function() {
     objectStore.createIndex('title', 'title', { unique: false });
     objectStore.createIndex('body', 'body', { unique: false });
     objectStore.createIndex('author', 'author', { unique: false });
-        objectStore.createIndex('time', 'time', { unique: false });
+    objectStore.createIndex('time', 'time', { unique: false });
     console.log('Database setup complete');
   };
 
@@ -110,8 +110,8 @@ window.onload = function() {
         // Create a list item, h3, and p to put each data item inside when displaying it
         // structure the HTML fragment, and append it inside the list
         const listItem = document.createElement('li');
-        const h5 = document.createElement('author');
-        const h4 = document.createElement('time');
+        const h5 = document.createElement('h5');
+        const h4 = document.createElement('h4');
         const h3 = document.createElement('h3');
         const para = document.createElement('p');
 
