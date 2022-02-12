@@ -127,11 +127,11 @@ window.onload = function() {
         list.appendChild(listItem);
 
         // Put the data from the cursor inside the h3 and para
-        h5.textContent = cursor.value.author;
-        h4.textContent = cursor.value.time;
+        h1.textContent = cursor.value.author;
+        h2.textContent = cursor.value.time;
         h3.textContent = cursor.value.title;
         para.textContent = cursor.value.body;
-        h2.textContent = cursor.value.blank;
+        h4.textContent = cursor.value.blank;
 
         // Store the ID of the data item inside an attribute on the listItem, so we know
         // which item it corresponds to. This will be useful later when we want to delete items
