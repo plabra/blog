@@ -77,7 +77,7 @@ window.onload = function() {
       timeInput.value = '';
       titleInput.value = '';
       bodyInput.value = '';
-      blankInput.value='///////////////////////';
+      blankInput.value='';
     };
 
     // Report on the success of the transaction completing, when everything is done
