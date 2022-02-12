@@ -75,6 +75,7 @@ window.onload = function() {
       timeInput.value = '';
       titleInput.value = '';
       bodyInput.value = '';
+      blankInput.value='///////////////////////';
     };
 
     // Report on the success of the transaction completing, when everything is done
@@ -114,6 +115,7 @@ window.onload = function() {
         const h4 = document.createElement('h4');
         const h3 = document.createElement('h3');
         const para = document.createElement('p');
+        const h2 = document.createElement('h2');
 
         listItem.appendChild(h5);
         listItem.appendChild(h4);
@@ -126,6 +128,7 @@ window.onload = function() {
         h4.textContent = cursor.value.time;
         h3.textContent = cursor.value.title;
         para.textContent = cursor.value.body;
+        h2.textContent = cursor.value.blank;
 
         // Store the ID of the data item inside an attribute on the listItem, so we know
         // which item it corresponds to. This will be useful later when we want to delete items
