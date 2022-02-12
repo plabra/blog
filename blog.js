@@ -5,6 +5,7 @@ const titleInput = document.querySelector('#title');
 const bodyInput = document.querySelector('#body');
 const authorInput = document.querySelector('#author');
 const timeInput = document.querySelector('#time');
+const blankInput = document.querySelector('#blank');
 const form = document.querySelector('form');
 const submitBtn = document.querySelector('form button');
 
@@ -47,6 +48,7 @@ window.onload = function() {
     objectStore.createIndex('body', 'body', { unique: false });
     objectStore.createIndex('author', 'author', { unique: false });
     objectStore.createIndex('time', 'time', { unique: false });
+    objectStore.createIndex('blank', 'blank', { unique: true });
     console.log('Database setup complete');
   };
 
@@ -59,7 +61,7 @@ window.onload = function() {
     e.preventDefault();
 
     // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
-    let newItem = { title: titleInput.value, body: bodyInput.value, author: authorInput.value, time: timeInput.value };
+    let newItem = { title: titleInput.value, body: bodyInput.value, author: authorInput.value, time: timeInput.value, blank: blankInput.value };
 
     // open a read/write db transaction, ready for adding the data
     let transaction = db.transaction(['notes_os'], 'readwrite');
@@ -121,6 +123,7 @@ window.onload = function() {
         listItem.appendChild(h4);
         listItem.appendChild(h3);
         listItem.appendChild(para);
+        listItem.appendChild(h2);
         list.appendChild(listItem);
 
         // Put the data from the cursor inside the h3 and para
