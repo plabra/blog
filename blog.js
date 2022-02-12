@@ -3,8 +3,7 @@ const para = document.querySelector('h3.S');
 para.addEventListener('click', updateName);
 function updateName() {
   let name = prompt('登入');
-  para.textContent = name ;
-  console.log('Succeed in signing in');
+  para.textContent = name;
 }
 
 
