@@ -3,6 +3,8 @@
 const list = document.querySelector('ul');
 const titleInput = document.querySelector('#title');
 const bodyInput = document.querySelector('#body');
+const authorInput = document.querySelector('#author');
+const timeInput = document.querySelector('#time');
 const form = document.querySelector('form');
 const submitBtn = document.querySelector('form button');
 
@@ -43,7 +45,8 @@ window.onload = function() {
     // Define what data items the objectStore will contain
     objectStore.createIndex('title', 'title', { unique: false });
     objectStore.createIndex('body', 'body', { unique: false });
-    objectStore.createIndex('name', 'name', { unique: true });
+    objectStore.createIndex('author', 'author', { unique: false });
+        objectStore.createIndex('time', 'time', { unique: false });
     console.log('Database setup complete');
   };
 
@@ -56,7 +59,7 @@ window.onload = function() {
     e.preventDefault();
 
     // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
-    let newItem = { title: titleInput.value, body: bodyInput.value, name: nameInput.value };
+    let newItem = { title: titleInput.value, body: bodyInput.value, author: authorInput.value, time: timeInput.value };
 
     // open a read/write db transaction, ready for adding the data
     let transaction = db.transaction(['notes_os'], 'readwrite');
@@ -68,9 +71,10 @@ window.onload = function() {
     var request = objectStore.add(newItem);
     request.onsuccess = function() {
       // Clear the form, ready for adding the next entry
+      authorInput.value = '';
+      timeInput.value = '';
       titleInput.value = '';
       bodyInput.value = '';
-      nameInput.value = '';
     };
 
     // Report on the success of the transaction completing, when everything is done
@@ -106,18 +110,21 @@ window.onload = function() {
         // Create a list item, h3, and p to put each data item inside when displaying it
         // structure the HTML fragment, and append it inside the list
         const listItem = document.createElement('li');
+        const h5 = document.createElement('author');
+        const h4 = document.createElement('time');
         const h3 = document.createElement('h3');
         const para = document.createElement('p');
-        const h4 = document.createElement('name');
 
-        listItem.appendChild(h3);
+        listItem.appendChild(h5);
         listItem.appendChild(h4);
+        listItem.appendChild(h3);
         listItem.appendChild(para);
         list.appendChild(listItem);
 
         // Put the data from the cursor inside the h3 and para
+        h5.textContent = cursor.value.author;
+        h4.textContent = cursor.value.time;
         h3.textContent = cursor.value.title;
-        h4.textContent = cursor.value.name;
         para.textContent = cursor.value.body;
 
         // Store the ID of the data item inside an attribute on the listItem, so we know
