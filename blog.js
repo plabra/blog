@@ -113,17 +113,17 @@ window.onload = function() {
         // Create a list item, h3, and p to put each data item inside when displaying it
         // structure the HTML fragment, and append it inside the list
         const listItem = document.createElement('li');
-        const h5 = document.createElement('h5');
-        const h4 = document.createElement('h4');
+        const h1 = document.createElement('h1');
+        const h2 = document.createElement('h2');
         const h3 = document.createElement('h3');
         const para = document.createElement('p');
-        const h2 = document.createElement('h2');
+        const h4 = document.createElement('h4');
 
-        listItem.appendChild(h5);
-        listItem.appendChild(h4);
+        listItem.appendChild(h1);
+        listItem.appendChild(h2);
         listItem.appendChild(h3);
         listItem.appendChild(para);
-        listItem.appendChild(h2);
+        listItem.appendChild(h4);
         list.appendChild(listItem);
 
         // Put the data from the cursor inside the h3 and para
