@@ -3,8 +3,7 @@ const para = document.querySelector('h3.S');
 para.addEventListener('click', updateName);
 function updateName() {
   let name = prompt('登入');
-  para.textContent = name;
-  objectStore.createIndex('name', 'name', { unique: true });
+  para.textContent = name ;
   console.log('Succeed in signing in');
 }
 
@@ -117,11 +116,9 @@ window.onload = function() {
         // structure the HTML fragment, and append it inside the list
         const listItem = document.createElement('li');
         const h3 = document.createElement('h3');
-        const h4 = document.createElement('name');
         const para = document.createElement('p');
 
         listItem.appendChild(h3);
-        listItem.appendChild(name);
         listItem.appendChild(para);
         list.appendChild(listItem);
 
