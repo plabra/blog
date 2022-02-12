@@ -34,7 +34,7 @@ header, footer {
 }
 
 .new-note {
-  background: #ddd;
+  background: rgba(203,246,246,0);
 }
 
 h1 {
