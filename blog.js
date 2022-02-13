@@ -133,19 +133,8 @@ window.onload = function() {
         para.textContent = cursor.value.body;
         h4.textContent = cursor.value.blank;
         
-        listItem.style.font-family: sans-serif, '黑体';
-        listItem.style.letter-spacing: 1px;
-        listItem.style.text-transform: uppercase;
-        listItem.style.text-align: center;
-        listItem.style.border: 2px solid rgba(0, 0, 200, 0.6);
-        listItem.style.background: rgba(0, 0, 200, 0.3);
-        listItem.style.color: rgba(0, 0, 200, 0.6);
-        listItem.style.box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
-        listItem.style.border-radius: 10px;
-        listItem.style.padding: 3px 10px;
-        listItem.style.display: inline-block;
-        listItem.style.cursor: pointer;
-
+        para.style.backgroundColor: rgba(0, 0, 200, 0.3);
+      
         // Store the ID of the data item inside an attribute on the listItem, so we know
         // which item it corresponds to. This will be useful later when we want to delete items
         listItem.setAttribute('data-note-id', cursor.value.id);
