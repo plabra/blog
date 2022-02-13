@@ -132,8 +132,6 @@ window.onload = function() {
         h3.textContent = cursor.value.title;
         para.textContent = cursor.value.body;
         h4.textContent = cursor.value.blank;
-        
-        para.style.backgroundColor = 'rgba(0, 0, 200, 0.3)';
       
         // Store the ID of the data item inside an attribute on the listItem, so we know
         // which item it corresponds to. This will be useful later when we want to delete items
