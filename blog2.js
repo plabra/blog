@@ -1,0 +1,191 @@
+// Create needed constants
+var list = document.querySelector('ol');
+var titleInput = document.querySelector('#title');
+var bodyInput = document.querySelector('#body');
+var authorInput = document.querySelector('#author');
+var timeInput = document.querySelector('#time');
+var blankInput = document.querySelector('#blank');
+var form = document.querySelector('form');
+var submitBtn = document.querySelector('form button');
+
+// Create an instance of a db object for us to store the open database in
+let db;
+
+window.onload = function() {
+  // Open our database; it is created if it doesn't already exist
+  // (see onupgradeneeded below)
+  let request = window.indexedDB.open('notes_db', 1);
+
+  // onerror handler signifies that the database didn't open successfully
+  request.onerror = function() {
+    console.log('Database failed to open');
+  };
+
+  // onsuccess handler signifies that the database opened successfully
+  request.onsuccess = function() {
+    console.log('Database opened succesfully');
+
+    // Store the opened database object in the db variable. This is used a lot below
+    db = request.result;
+
+    // Run the displayData() function to display the notes already in the IDB
+    displayData();
+  };
+
+  // Setup the database tables if this has not already been done
+  request.onupgradeneeded = function(e) {
+
+    // Grab a reference to the opened database
+    let db = e.target.result;
+
+    // Create an objectStore to store our notes in (basically like a single table)
+    // including a auto-incrementing key
+    let objectStore = db.createObjectStore('notes_os', { keyPath: 'id', autoIncrement:true });
+
+    // Define what data items the objectStore will contain
+    objectStore.createIndex('title', 'title', { unique: false });
+    objectStore.createIndex('body', 'body', { unique: false });
+    objectStore.createIndex('author', 'author', { unique: false });
+    objectStore.createIndex('time', 'time', { unique: false });
+    objectStore.createIndex('blank', 'blank', { unique: false });
+    console.log('Database setup complete');
+  };
+
+  // Create an onsubmit handler so that when the form is submitted the addData() function is run
+  form.onsubmit = addData;
+
+  // Define the addData() function
+  function addData(e) {
+    // prevent default - we don't want the form to submit in the conventional way
+    e.preventDefault();
+
+    // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
+    let newItem = { title: titleInput.value, body: bodyInput.value, author: authorInput.value, time: timeInput.value, blank: blankInput.value };
+
+    // open a read/write db transaction, ready for adding the data
+    let transaction = db.transaction(['notes_os'], 'readwrite');
+
+    // call an object store that's already been added to the database
+    let objectStore = transaction.objectStore('notes_os');
+
+    // Make a request to add our newItem object to the object store
+    var request = objectStore.add(newItem);
+    request.onsuccess = function() {
+      // Clear the form, ready for adding the next entry
+      authorInput.value = '';
+      timeInput.value = '';
+      titleInput.value = '';
+      bodyInput.value = '';
+      blankInput.value='';
+    };
+
+    // Report on the success of the transaction completing, when everything is done
+    transaction.oncomplete = function() {
+      console.log('Transaction completed: database modification finished.');
+
+      // update the display of data to show the newly added item, by running displayData() again.
+      displayData();
+    };
+
+    transaction.onerror = function() {
+      console.log('Transaction not opened due to error');
+    };
+  }
+
+  // Define the displayData() function
+  function displayData() {
+    // Here we empty the contents of the list element each time the display is updated
+    // If you ddn't do this, you'd get duplicates listed each time a new note is added
+    while (list.firstChild) {
+      list.removeChild(list.firstChild);
+    }
+
+    // Open our object store and then get a cursor - which iterates through all the
+    // different data items in the store
+    let objectStore = db.transaction('notes_os').objectStore('notes_os');
+    objectStore.openCursor().onsuccess = function(e) {
+      // Get a reference to the cursor
+      let cursor = e.target.result;
+
+      // If there is still another data item to iterate through, keep running this code
+      if(cursor) {
+        // Create a list item, h3, and p to put each data item inside when displaying it
+        // structure the HTML fragment, and append it inside the list
+        var listItem = document.createElement('li');
+        var h1 = document.createElement('h1');
+        var h2 = document.createElement('h2');
+        var h3 = document.createElement('h3');
+        var para = document.createElement('p');
+        var h4 = document.createElement('h4');
+
+        listItem.appendChild(h1);
+        listItem.appendChild(h2);
+        listItem.appendChild(h3);
+        listItem.appendChild(para);
+        listItem.appendChild(h4);
+        list.appendChild(listItem);
+
+        // Put the data from the cursor inside the h3 and para
+        h1.textContent = cursor.value.author;
+        h2.textContent = cursor.value.time;
+        h3.textContent = cursor.value.title;
+        para.textContent = cursor.value.body;
+        h4.textContent = cursor.value.blank;
+      
+        // Store the ID of the data item inside an attribute on the listItem, so we know
+        // which item it corresponds to. This will be useful later when we want to delete items
+        listItem.setAttribute('data-note-id', cursor.value.id);
+
+        // Create a button and place it inside each listItem
+        var deleteBtn = document.createElement('button');
+        listItem.appendChild(deleteBtn);
+        deleteBtn.textContent = '删除';
+
+        // Set an event handler so that when the button is clicked, the deleteItem()
+        // function is run
+        deleteBtn.onclick = deleteItem;
+
+        // Iterate to the next item in the cursor
+        cursor.continue();
+      } else {
+        // Again, if list item is empty, display a 'No notes stored' message
+        if(!list.firstChild) {
+          var listItem = document.createElement('li');
+          listItem.textContent = '无内容'
+          list.appendChild(listItem);
+        }
+        // if there are no more cursor items to iterate through, say so
+        console.log('Notes all displayed');
+      }
+    };
+  }
+
+  // Define the deleteItem() function
+  function deleteItem(e) {
+    // retrieve the name of the task we want to delete. We need
+    // to convert it to a number before trying it use it with IDB; IDB key
+    // values are type-sensitive.
+    let noteId = Number(e.target.parentNode.getAttribute('data-note-id'));
+
+    // open a database transaction and delete the task, finding it using the id we retrieved above
+    let transaction = db.transaction(['notes_os'], 'readwrite');
+    let objectStore = transaction.objectStore('notes_os');
+    let request = objectStore.delete(noteId);
+
+    // report that the data item has been deleted
+    transaction.oncomplete = function() {
+      // delete the parent of the button
+      // which is the list item, so it is no longer displayed
+      e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+      console.log('Note ' + noteId + ' deleted.');
+
+      // Again, if list item is empty, display a 'No notes stored' message
+      if(!list.firstChild) {
+        var listItem = document.createElement('li');
+        listItem.textContent = '无内容';
+        list.appendChild(listItem);
+      }
+    };
+  }
+
+};
