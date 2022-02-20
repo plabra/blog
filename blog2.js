@@ -178,7 +178,7 @@ window.onload = function() {
 
       // Again, if list item is empty, display a 'No notes stored' message
       if(!list.firstChild) {
-        const listItem = document.createElement('li');
+        var listItem = document.createElement('li');
         listItem.textContent = '无内容';
         list.appendChild(listItem);
       }
