@@ -1,7 +1,7 @@
 var sect = document.querySelector('section');
-var para = document.createElement('p');
-para.textContent = 'We hope you enjoyed the ride.';
-sect.appendChild(para);
+var para = document.createElement('li');
+li.textContent = 'We hope you enjoyed the ride.';
+sect.appendChild(li);
 var text = document.createTextNode(' — the premier source for web development knowledge.');
-var linkPara = document.querySelector('p');
-linkPara.appendChild(text);
+var linkLi = document.querySelector('p');
+linkLi.appendChild(text);
