@@ -6,3 +6,4 @@ var text = document.createTextNode(' — the premier source for web development 
 var linkLi = document.querySelector('p');
 linkLi.appendChild(text);
 sect.removeChild(linkLi);
+linkLi.parentNode.removeChild(linkLi);
