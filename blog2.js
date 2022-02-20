@@ -1,3 +1,4 @@
+var list = document.querySelector('ol');
 var title2Input = document.querySelector('#title2');
 var body2Input = document.querySelector('#body2');
 var author2Input = document.querySelector('#author2');
