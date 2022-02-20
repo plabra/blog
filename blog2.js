@@ -3,8 +3,8 @@ var body2Input = document.querySelector('#body2');
 var author2Input = document.querySelector('#author2');
 var time2Input = document.querySelector('#time2');
 var blank2Input = document.querySelector('#blank2');
-var form = document.querySelector('form');
-var submitBtn = document.querySelector('form button');
+var form2 = document.querySelector('form2');
+var submitBtn2 = document.querySelector('form button2');
 
 // Create an instance of a db object for us to store the open database in
 let db;
