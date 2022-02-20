@@ -19,24 +19,24 @@
         <h2>发表文章或评论</h2>
         <form>
           <div>
-            <label for="author">作者</label>
-            <input id="author" type="text" required>
+            <label for="author2">作者</label>
+            <input id="author2" type="text" required>
           </div>
           <div>
-            <label for="time">时间</label>
-            <input id="time" type="text" required>
+            <label for="time2">时间</label>
+            <input id="time2" type="text" required>
           </div>
           <div>
-            <label for="title">标题</label>
-            <input id="title" type="text" required>
+            <label for="title2">标题</label>
+            <input id="title2" type="text" required>
           </div>
           <div>
-            <label for="body">内容</label>
-            <input id="body" type="text" required>
+            <label for="body2">内容</label>
+            <input id="body2" type="text" required>
           </div>
           <div>
-            <label for="blank">隔间</label>
-            <input id="blank" type="blank" required>
+            <label for="blank2">隔间</label>
+            <input id="blank2" type="text" required>
             <p>↑建议使用 //////////////////////////////////////////////////////// 作为间隔</p>
           </div>
           <div>
@@ -47,6 +47,16 @@
       <section class="note-display">
         <h2>文章</h2>
         <ol>
+          <script>
+            var sect = document.querySelector('section');
+            var li = document.createElement('li');
+            li.textContent ='';
+            sect.appendChild(li);
+            var text = document.createTextNode('');
+            var linkLi = document.querySelector('li');
+            linkLi.appendChild(text);
+            
+            
 
         </ol>
       </section>
