@@ -1,5 +1,5 @@
 var sect = document.querySelector('section');
-var para = document.createElement('li');
+var li = document.createElement('li');
 li.textContent = 'We hope you enjoyed the ride.';
 sect.appendChild(li);
 var text = document.createTextNode(' — the premier source for web development knowledge.');
