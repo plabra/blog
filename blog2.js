@@ -136,13 +136,13 @@ window.onload = function() {
         listItem.setAttribute('data-note-id', cursor.value.id);
 
         // Create a button and place it inside each listItem
-        var deleteBtn = document.createElement('button');
-        listItem.appendChild(deleteBtn);
-        deleteBtn.textContent = '删除';
+        var deleteBtn2 = document.createElement('button');
+        listItem.appendChild(deleteBtn2);
+        deleteBtn2.textContent = '删除';
 
         // Set an event handler so that when the button is clicked, the deleteItem()
         // function is run
-        deleteBtn.onclick = deleteItem;
+        deleteBtn2.onclick = deleteItem;
 
         // Iterate to the next item in the cursor
         cursor.continue();
