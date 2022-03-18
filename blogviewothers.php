@@ -11,6 +11,10 @@
 
 <body>
   <?php
+  $action_$=GET['action']
+  echo "document.write('".$action.'");n";
+  ?>
+  <?php
   @require 'conn.php';
   //最大显示页数
   $max_pages = 9;
