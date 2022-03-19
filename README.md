@@ -1,2 +1,2 @@
-# my own blog
-## http://plabra.github.io/blog
+# 主页
+## http://plabra.github.io/main
