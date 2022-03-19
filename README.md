@@ -1,2 +1,2 @@
 # my own blog
-##https://plabra.github.io/blog/blogviewown.html
+# http://plabra.github.io/blog
