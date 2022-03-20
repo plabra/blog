@@ -72,12 +72,21 @@ window.onload = function() {
     let objectStore = transaction.objectStore('notes_os');
 
     //get time
-    function mytime(){
-    var a = new Date();
-    var b = a.toLocaleTimeString();
-    var c = a.toLocaleDateString();
-    document.getElementById("time").innerHTML = c+"&nbsp"+b;}
-    setInterval(function() {mytime()},1000);
+    fuction showTime(){
+      var t=new Date()
+      var year = t.getFullYear();
+      var month = t.getMonth();
+      var day = t.getDate();
+      var week = t.getDay();
+      var arr = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+      var hour = t.getHours();
+      var minute = t.getMinutes();
+      var second = t.getSeconds();
+      var timeInput = year+"/"+month+"/"+day""arr[week]+""+hour+((minute<10)?:0":":")+minute+((second<10)?:0":":")+second+((hour>12)?".pm":".am");
+      document.getElementById("time").value=timeInput;
+      }
+      setInterval("timeInput()",1000);
+      
 
     
     // Make a request to add our newItem object to the object store
@@ -85,7 +94,9 @@ window.onload = function() {
     request.onsuccess = function() {
       // Clear the form, ready for adding the next entry
       authorInput.value = '';
-      timeInput.value = c+"&nbsp"+b;
+      var timeInput = year+"/"+month+"/"+day""arr[week]+""+hour+((minute<10)?:0":":")+minute+((second<10)?:0":":")+second+((hour>12)?".pm":".am");
+      titleInput.value = '';
+      titleInput.value = '';
       titleInput.value = '';
       bodyInput.value = '';
       blankInput.value='';
