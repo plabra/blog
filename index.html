@@ -22,11 +22,17 @@
     
     <main>
     <h2>区域</h2>
-    <ul>
-      <li><h2><a href="download.html" title="下载">下载区</a></h2></li>
-      <li><h2><a href="blogviewown.html" title="博文">博文区（仅个人可见版）</a></h2></li>
-      <li><h2><a href="blogviewothers.html" title="博文">博文区（他人可见版）</a></h2></li>
-    </ul>
+    <form name="download" method="post" action="download.html"> 
+      <input type="button" name="Button" value="下载区" onClick="submit()"> 
+    </form>
+      
+    <form name="blog" method="post" action="blogviewown.html"> 
+      <input type="button" name="Button" value="博文区1" onClick="submit()"> 
+    </form>  
+      
+    <form name="blog2" method="post" action="blogviewothers.html"> 
+      <input type="button" name="Button" value="博文区2" onClick="submit()"> 
+    </form>
 
     </main>
     
