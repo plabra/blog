@@ -94,7 +94,7 @@ window.onload = function() {
     request.onsuccess = function() {
       // Clear the form, ready for adding the next entry
       authorInput.value = '';
-      var timeInput = year+"/"+month+"/"+day""arr[week]+""+hour+((minute<10)?:0":":")+minute+((second<10)?:0":":")+second+((hour>12)?".pm":".am");
+      timeInput.value = year+"/"+month+"/"+day""arr[week]+""+hour+((minute<10)?:0":":")+minute+((second<10)?:0":":")+second+((hour>12)?".pm":".am");
       titleInput.value = '';
       titleInput.value = '';
       titleInput.value = '';
