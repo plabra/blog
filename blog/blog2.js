@@ -1,6 +1,6 @@
 // upload blogs 
 // Create needed constants
-const list = document.querySelector('ul');
+const list = document.querySelector('ol');
 const titleInput = document.querySelector('#title');
 const bodyInput = document.querySelector('#body');
 const authorInput = document.querySelector('#author');
