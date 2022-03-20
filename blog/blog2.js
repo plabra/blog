@@ -2,12 +2,14 @@
 // Create needed constants
 const list = document.querySelector('ol');
 const titleInput = document.querySelector('#title');
+const timeInput = document.getElementById('time');
 const bodyInput = document.querySelector('#body');
 const authorInput = document.querySelector('#author');
-const timeInput = document.querySelector('#time');
 const blankInput = document.querySelector('#blank');
 const form = document.querySelector('form');
 const submitBtn = document.querySelector('form button');
+
+
 
 // Create an instance of a db object for us to store the open database in
 let db;
@@ -69,12 +71,21 @@ window.onload = function() {
     // call an object store that's already been added to the database
     let objectStore = transaction.objectStore('notes_os');
 
+    //get time
+    function mytime(){
+    var a = new Date();
+    var b = a.toLocaleTimeString();
+    var c = a.toLocaleDateString();
+    document.getElementById("time").innerHTML = c+"&nbsp"+b;}
+    setInterval(function() {mytime()},1000);
+
+    
     // Make a request to add our newItem object to the object store
     var request = objectStore.add(newItem);
     request.onsuccess = function() {
       // Clear the form, ready for adding the next entry
       authorInput.value = '';
-      timeInput.value = '';
+      timeInput.value = 'c+"&nbsp"+b';
       titleInput.value = '';
       bodyInput.value = '';
       blankInput.value='';
