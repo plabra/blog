@@ -85,7 +85,7 @@ window.onload = function() {
     request.onsuccess = function() {
       // Clear the form, ready for adding the next entry
       authorInput.value = '';
-      timeInput.value = 'c+"&nbsp"+b';
+      timeInput.value = c+"&nbsp"+b;
       titleInput.value = '';
       bodyInput.value = '';
       blankInput.value='';
