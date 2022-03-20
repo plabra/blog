@@ -141,8 +141,8 @@ window.onload = function() {
         const deleteBtn = document.createElement('button');
         listItem.appendChild(deleteBtn);
         deleteBtn.textContent = '删除';
-        deleteBtn.style.text-decoration = "none";
-        deleteBtn.style.border-style = "none";
+        deleteBtn.style.textDecoration = "none";
+        deleteBtn.style.borderStyle = "none";
 
         // Set an event handler so that when the button is clicked, the deleteItem()
         // function is run
