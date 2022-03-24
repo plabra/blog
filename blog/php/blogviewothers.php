@@ -15,6 +15,7 @@
 
     <main>
       <body>
+        <?php
   @require 'conn.php';
   //最大显示页数
   $max_pages = 9;
