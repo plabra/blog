@@ -139,6 +139,18 @@ window.onload = function() {
         para.style.wordWrap = "normal";
         h4.style.wordWrap = "normal";
         
+        h1.style.margin = "0 auto";
+        h1.style.maxWidth = "800px";
+        h2.style.margin = "0 auto";
+        h2.style.maxWidth = "800px";
+        h3.style.margin = "0 auto";
+        h3.style.maxWidth = "800px";
+        para.style.margin = "0 auto";
+        para.style.maxWidth = "800px";
+        h4.style.margin = "0 auto";
+        h4.style.maxWidth = "800px";
+
+
 
 
         // Store the ID of the data item inside an attribute on the listItem, so we know
