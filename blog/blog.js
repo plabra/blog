@@ -133,11 +133,11 @@ window.onload = function() {
         para.textContent = cursor.value.body;
         h4.textContent = cursor.value.blank;
 
-        h1.style.word-wrap = "normal";
-        h2.style.word-wrap = "normal";
-        h3.style.word-wrap = "normal";
-        para.style.word-wrap = "normal";
-        h4.style.word-wrap = "normal";
+        h1.style.wordWrap = "normal";
+        h2.style.wordWrap = "normal";
+        h3.style.wordWrap = "normal";
+        para.style.wordWrap = "normal";
+        h4.style.wordWrap = "normal";
         
 
 
