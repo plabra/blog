@@ -132,7 +132,15 @@ window.onload = function() {
         h3.textContent = cursor.value.title;
         para.textContent = cursor.value.body;
         h4.textContent = cursor.value.blank;
-      
+
+        h1.style.word-wrap = "normal";
+        h2.style.word-wrap = "normal";
+        h3.style.word-wrap = "normal";
+        para.style.word-wrap = "normal";
+        h4.style.word-wrap = "normal";
+        
+
+
         // Store the ID of the data item inside an attribute on the listItem, so we know
         // which item it corresponds to. This will be useful later when we want to delete items
         listItem.setAttribute('data-note-id', cursor.value.id);
