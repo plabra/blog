@@ -1,14 +1,14 @@
 p.R{
   font-family: sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
-  border: 1px solid rgba(0, 0, 200, 0.6);
+  border: 2px solid rgba(0, 0, 200, 0.6);
   background: rgba(0, 0, 200, 0.3);
   color: rgba(0, 0, 200, 0.6);
-  box-shadow: 1px 1px 1px rgba(0, 0, 200, 0.4);
-  border-radius: 1px;
-  padding: 1px 1px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 200, 0.4);
+  border-radius: 2px;
+  padding: 2px 2px;
   display: inline-block;
   cursor: pointer;
 }
