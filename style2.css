@@ -208,6 +208,10 @@ div {
      text-decoration: none;
      color: black;
      }
+   a.v{
+     text-decoration: none;
+     color: white;
+     }
    a.u:visited{
      color: black;
      }
