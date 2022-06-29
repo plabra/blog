@@ -6,12 +6,43 @@
     <title>个人简介</title>
     <link href="../../style2.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../siteicon.png" type="image/x-icon">
+        <style>
+        * {
+            marker: 0;
+            padding: 0;
+        }
+
+        p {
+             300px;
+          height: 20px;
+            position: relative;
+        }
+
+
+        s {
+            display: inline-block;
+            height: 100%;
+            border-bottom: 1px dotted black;
+        }
+    </style>
   </head>
   
   <body>
     <header>
       <h1>个人简介</h1>
     </header>
+    
+    <p>
+    <span>第一层目录</span><s></s>
+</p>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        var resultWidth = $("p").width() - $("span").width();
+        $("s").css("width",resultWidth)
+    })
+</script>
     
     <main>
       <h2>h2</h2>
