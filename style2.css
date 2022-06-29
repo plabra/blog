@@ -215,6 +215,9 @@ div {
    a.u:visited{
      color: black;
      }
+   a.v:visited{
+     color: black;
+     }
    button.B{
      text-decoration: none;
      border-style: none;
