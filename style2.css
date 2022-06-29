@@ -29,6 +29,9 @@ header, footer {
   padding: 0 10px;
 }
 
+header.r{
+  line-height: 20px;
+}
 .new-note, .note-display {
   padding: 20px;
 }
