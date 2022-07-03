@@ -229,15 +229,7 @@ div {
      background: rgba(203,246,246,0.2);
      text-align: center;
      }
-    .box {
-      width: 1000px;
-      height: 600px;
-      margin: 10px auto;
-      background-color: green;
-      font-size: 50px;
-      text-align: center;
-      line-height: 600px;
-    }
+    
     .totop {
       display: none;
       position: fixed;
