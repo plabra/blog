@@ -230,6 +230,7 @@ div {
      display: inline;
      margin-top: 0;
      margin-left: 5px;
+     border: none;
      }
    p.WIP {
      float: left;
