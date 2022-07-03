@@ -225,5 +225,16 @@ div {
      text-decoration: none;
      border-style: none;
      }
-     
+   img.WIP {
+     float: left;
+     display: inline;
+     margin-top: 0;
+     margin-left: 5px;
+     }
+   p.WIP {
+     float: left;
+     display: inline;
+     margin-top: 20;
+     margin-left: 5px;
+     }
   
