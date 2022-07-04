@@ -231,7 +231,7 @@ div {
      }
     
     .totop {
-      position: relative;
+      position: absolute;
       bottom: 0px;
       right: 0px;
       width: 40px;
