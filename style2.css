@@ -232,16 +232,22 @@ div {
     
     .totop {
       display: inline-block;
-      position: fixed;
       bottom: 0px;
       right: 0px;
       width: 40px;
-      height: 40px;
-      background-color: skyblue;
-      font-size: 5px;
+      height: 40px:
+      font-family: sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       text-align: center;
-      line-height: 100px;
-      text-align: center;
+      border: 2px solid rgba(0, 0, 200, 0.6);
+      background: rgba(0, 0, 200, 0.3);
+      color: rgba(0, 0, 200, 0.6);
+      box-shadow: 3px 3px 10px rgba(0, 0, 200, 0.4);
+      border-radius: 2px;
+      padding: 2px 2px;
+      display: inline-block;
+      cursor: pointer;
     }
     .totop:hover {
       cursor: pointer;
