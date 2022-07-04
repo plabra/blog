@@ -236,9 +236,7 @@ div {
       right: 0px;
       width: 40px;
       height: 40px:
-      font-family: sans-serif;
       letter-spacing: 2px;
-      text-transform: uppercase;
       text-align: center;
       border: 2px solid rgba(0, 0, 200, 0.6);
       background: rgba(0, 0, 200, 0.3);
@@ -246,11 +244,6 @@ div {
       box-shadow: 3px 3px 10px rgba(0, 0, 200, 0.4);
       border-radius: 2px;
       padding: 2px 2px;
-      display: inline-block;
       cursor: pointer;
-    }
-    .totop:hover {
-      cursor: pointer;
-      color: #fff;
     }
 
