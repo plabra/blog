@@ -241,6 +241,7 @@ div {
       font-size: 5px;
       text-align: center;
       line-height: 100px;
+      text-align: center;
     }
     .totop:hover {
       cursor: pointer;
