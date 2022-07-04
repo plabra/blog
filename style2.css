@@ -231,7 +231,7 @@ div {
      }
     
     .totop {
-      display: inline-block;
+      position: relative;
       bottom: 0px;
       right: 0px;
       width: 40px;
