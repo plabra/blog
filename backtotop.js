@@ -3,7 +3,7 @@ let totop = document.querySelector('.totop')
     window.onscroll = function() {
       // 获取浏览器卷去的高度
       let high = document.documentElement.scrollTop || document.body.scrollTop
-      if (high >= 0) {
+      if (high >= 50) {
         totop.style.display = 'block'
       } else {
         totop.style.display = 'none'
