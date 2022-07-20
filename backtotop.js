@@ -5,12 +5,15 @@ let totop = document.querySelector('.totop')
       let high = document.documentElement.scrollTop || document.body.scrollTop
       if (high >= 50) {
         totop.style.display = 'block'
+        $.('.totop').fadeIn(1000);
       } else {
         totop.style.display = 'none'
+        $.('.totop').fadeOut(1000);
       }
     }
     // 点击返回顶部，可以加动画使其慢慢回到顶部
     totop.addEventListener('click',() => {
       document.documentElement.scrollTop = 0
       document.body.scrollTop = 0
+      $('html,body').animate.({scrollTop: "0px" });
     })
