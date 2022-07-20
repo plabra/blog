@@ -4,16 +4,13 @@ let totop = document.querySelector('.totop')
       // 获取浏览器卷去的高度
       let high = document.documentElement.scrollTop || document.body.scrollTop
       if (high >= 50) {
-        
-        $.('.totop').fadeIn(50);
+        totop.style.display = 'block'
       } else {
-      
-        $.('.totop').fadeOut(50);
+        totop.style.display = 'none'
       }
     }
     // 点击返回顶部，可以加动画使其慢慢回到顶部
     totop.addEventListener('click',() => {
-  
-      
-      $('html,body').animate.({scrollTop: "0px" });
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
     })
