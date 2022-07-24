@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   max-width: 800px;
 }
-body {
+body.u {
   background-color: rgba(0,0,255,0.6);
 }
 
