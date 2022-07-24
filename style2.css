@@ -21,7 +21,7 @@ body {
   max-width: 800px;
 }
 body.u {
-  background-color: rgba(0,0,255,0.6);
+  background-color: rgba(0,0,255,0.01);
 }
 
 header, footer {
