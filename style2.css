@@ -31,6 +31,10 @@ header, footer {
   padding: 0 10px;
 }
 
+header.R, footer.R{
+  text-align:center;
+}
+
 header.r{
   line-height: 25px;
 }
