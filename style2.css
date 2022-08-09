@@ -33,9 +33,6 @@ header, footer {
 
 header.R, footer.R{
   letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height:height;
-  text-align:center;
   background-color: rgba(0,0,255,0.1);
   border: 2px solid rgba(0, 0, 200, 0.6);
   background: rgba(0, 0, 255, 0.1);
