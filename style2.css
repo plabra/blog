@@ -274,4 +274,5 @@ div {
       padding: 6px 20px;
       display: inline-block;
       cursor: pointer;
+      float: right;
     }
