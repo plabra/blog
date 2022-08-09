@@ -45,6 +45,7 @@ header.R, footer.R{
   padding: 3px 10px;
   display: inline-block;
   cursor: pointer;
+  align: center;
 }
 
 header.R{
