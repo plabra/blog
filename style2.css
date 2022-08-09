@@ -47,6 +47,15 @@ header.R, footer.R{
   cursor: pointer;
 }
 
+header.R{
+  position: relative;
+  top: 0.125rem;
+}
+footer.R{
+  position: relative;
+  bottom: 0.125rem;
+}
+
 header.r{
   line-height: 25px;
 }
