@@ -54,7 +54,10 @@ details{
      position:relative;
      display:block;
      }
- details[open]{
+details[open1]{
+     height:auto;
+     }
+details[open2]{
      height:auto;
      }
 
