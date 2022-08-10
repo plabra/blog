@@ -1,4 +1,4 @@
-function spanClick(){
+function span1Click(){
      var obj=document.getElementById("details1");
      var att=obj.getAttribute("open1");
      if(att!="open1"){
@@ -8,7 +8,7 @@ function spanClick(){
          obj.removeAttribute("open1");
          }
      }
-function spanClick(){
+function span2Click(){
      var obj=document.getElementById("details2");
      var att=obj.getAttribute("open2");
      if(att!="open2"){
