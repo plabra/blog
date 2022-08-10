@@ -47,6 +47,18 @@ header.R, footer.R{
 header.r{
   line-height: 25px;
 }
+
+details{
+     overflow:hidden;
+     height:0;
+     padding-left:200px;
+     position:relative;
+     display:block;
+     }
+ details[open]{
+     height:auto;
+     }
+
 .new-note, .note-display {
   padding: 20px;
 }
@@ -302,3 +314,4 @@ div {
       display: inline-block;
       cursor: pointer;
     }
+
