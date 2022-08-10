@@ -275,7 +275,6 @@ div {
     }
     div.download{
       letter-spacing: 1px;
-      text-transform: uppercase;
       background-color: rgba(0,0,255,0.1);
       border: 2px solid rgba(0, 0, 200, 0.6);
       background: rgba(0, 0, 255, 0.1);
@@ -289,7 +288,6 @@ div {
     }
     div.blogwriting{
       letter-spacing: 2px;
-      text-transform: uppercase;
       background-color: rgba(0,0,255,0.1);
       border: 2px solid rgba(0, 0, 200, 0.6);
       background: rgba(0, 0, 255, 0.1);
@@ -302,7 +300,6 @@ div {
     }
      div.blogview{
       letter-spacing: 2px;
-      text-transform: uppercase;
       background-color: rgba(0,0,255,0.1);
       border: 2px solid rgba(0, 0, 200, 0.6);
       background: rgba(0, 0, 255, 0.1);
