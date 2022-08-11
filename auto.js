@@ -20,7 +20,4 @@ window.util = util;
 if( !util.isMB() ){
 window.location.href = 'https://plabra.github.io/main/index2.html';
 
-}else{
-window.location.href = 'https://plabra.github.io/main';
-
 })();
