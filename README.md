@@ -8,4 +8,4 @@
 ### unhidden.js提供桌面版网页的隐藏/显示文字功能。
 ### blog.js提供写仅个人可见的博客功能。
 ### style2.css提供所有使用样式。
-### [易网页.js](http://github.com/itorr/e)
+
