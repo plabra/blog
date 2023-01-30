@@ -289,7 +289,6 @@ div {
       display: inline-block;
       cursor: pointer;
       float: right;
-      width: 256px;
     }
     div.blogwriting{
       letter-spacing: 2px;
