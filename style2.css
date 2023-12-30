@@ -162,3 +162,9 @@ div {
       width: 536px;
     }
 
+      img.z{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        }
+
