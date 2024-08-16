@@ -49,6 +49,11 @@ header.r{
   line-height: 25px;
 }
 
+header.X, footer.X {
+  background-color: rgba(0,0,255,0.1);
+  color: white;
+}
+
 details{
      overflow:hidden;
      height:0;
