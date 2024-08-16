@@ -50,8 +50,15 @@ header.r{
 }
 
 header.X, footer.X {
+  letter-spacing: 1px;
   background-color: rgba(0,0,255,0.1);
-  color: white;
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 255, 0.1);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+  display: inline-block;
+  cursor: pointer;
+  width: 792px;
 }
 
 details{
