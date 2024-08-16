@@ -1,7 +1,7 @@
 # [主页](https://plabra.github.io/main/)
 ## 静态个人主页
 ### index.html及其他html（除index2.html及xuexi.html）皆为竖版服务。
-### index2.html为桌面版服务。
+### index2.html及xuexi.html为桌面版服务。
 ### auto.js加载于index.html，提供竖版向桌面版的跳转服务。
 ### auto2.js加载于index2.html，提供桌面版向竖版的跳转服务。
 ### backtotop.js提供回至页面顶部功能。
